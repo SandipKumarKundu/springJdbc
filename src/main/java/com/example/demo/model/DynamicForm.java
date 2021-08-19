@@ -21,18 +21,18 @@ public class DynamicForm {
 
     public String name;
 
-    public List<HashMap<String, String>> getInput() {
-        return input;
-    }
-
-    public void setInput(List<HashMap<String, String>> input) {
-        this.input = input;
-    }
-
-    public List<HashMap<String,String>> input ;
+    public List<HashMap<String,Object>> input ;
 
     public String getId() {
         return id;
+    }
+
+    public List<HashMap<String, Object>> getInput() {
+        return input;
+    }
+
+    public void setInput(List<HashMap<String, Object>> input) {
+        this.input = input;
     }
 
     public void setId(String id) {

@@ -1,12 +1,23 @@
 package com.example.demo.model;
 import org.springframework.data.annotation.Id;
 import org.springframework.data.mongodb.core.mapping.Document;
+import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
 
 import java.util.Date;
+import java.util.List;
+
 @Document(collection = "users")
 public class Users {
     @Id
     public String id;
+
+    public List getRoles() {
+        return roles;
+    }
+
+    public void setRoles(List roles) {
+        this.roles = roles;
+    }
 
     public String firstName;
     public String lastName;
@@ -16,6 +27,7 @@ public class Users {
     public String phoneNumber;
     public String gender;
     public Date DOB;
+    public List roles;
     public String getPassword() {
         return password;
     }
